@@ -88,7 +88,7 @@
         outline: none;
         border: none;
         resize: none;
-        font-size: 3vh;
+        font-size: 2.6vh;
         font-family: sans-serif;
       }
     </style>
@@ -108,35 +108,6 @@
             top: 26.3%; color: white; outline: none;
             white-space: pre-wrap;">
       </div>
-    </div>
-    <script>
-      function takeScreenshot() {
-        const target = document  .getElementById("All");
-
-        html2canvas(target, {
-          useCORS: true,
-          allowTaint: false
-        }).then(canvas => {
-          canvas.toBlob(function(blob) {
-            const link = document  .createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = "screenshot.png";
-            link.click();
-          }, "image/png");
-        });
-      }
-    </script>
-  </body>
-</html>  </head>
-  <body>
-    <div id="All">
-      <img id="icon-back" src="https://raw.githubusercontent.com/Ehmedisdeaq/iosfont/main/icon-back.png">
-      <img id="icon-share" src="https://raw.githubusercontent.com/Ehmedisdeaq/iosfont/main/icon-share.png">
-      <img id="icon-menu" src="https://raw.githubusercontent.com/Ehmedisdeaq/iosfont/main/icon-menu.png">
-      <p id="all-notes">All Notes</p>
-      <div id="note-bg"></div>
-      <p id="done" onclick="takeScreenshot()">Done</p>
-      <textarea id="inputtext" cols="10" wrap="off"></textarea>
     </div>
     <script>
       function takeScreenshot() {
